@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+</head>
+<body>
+<div id="page">
+    <div class="section first">
+        <div class="logo">
+            <img src="images/logo.png" alt=""/>
+        </div>
+        <div class="text">
+            <img src="images/text_1.png" alt=""/>
+            <img src="images/text_2.png" alt=""/>
+            <img src="images/text_3.png" alt=""/>
+            <img src="images/text_4.png" alt=""/>
+            <img src="images/text_5.png" alt=""/>
+            <img src="images/text_6.png" alt=""/>
+            <img src="images/text_7.png" alt=""/>
+            <img src="images/text_8.png" alt=""/>
+        </div>
+        <div class="info1">
+            <img src="images/info_1.png" alt=""/>
+        </div>
+    </div>
+    <div class="section second">
+        <div class="shield">
+            <img src="images/shield_1.png" alt=""/>
+            <img src="images/shield_2.png" alt=""/>
+            <img src="images/shield_3.png" alt=""/>
+            <img src="images/shield_4.png" alt=""/>
+            <img src="images/shield_5.png" alt=""/>
+            <img src="images/shield_6.png" alt=""/>
+            <img src="images/shield_7.png" alt=""/>
+            <img src="images/shield_8.png" alt=""/>
+            <img src="images/shield_9.png" alt=""/>
+        </div>
+        <div class="info2">
+            <img src="images/info_2.png" alt=""/>
+        </div>
+    </div>
+    <div class="section third">
+        <div class="info3"></div>
+        <div class="circle" id="cricle">
+            <div class="rocket" id="rocket"></div>
+        </div>
+
+    </div>
+    <div class="section fourth">
+        <div class="search">
+            <div class="searchBar"></div>
+            <div class="key"></div>
+            <div class="result"></div>
+        </div>
+        <div class="info4"></div>
+    </div>
+    <div class="section fifth">
+        <div class="info5"></div>
+        <div class="broswer">
+            <div class="toolBar"></div>
+            <div class="warp"></div>
+            <div class="extra"></div>
+            <div class="leftside"></div>
+            <div class="topside"></div>
+            <div class="rightside"></div>
+            <div class="bottomside"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(function(){
+        $('#page').fullpage({
+            sectionsColor:['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+                        afterLoad:function(afterLink,index){
+                    $('.section').removeClass("current");
+                    setTimeout(function(){
+//                        $("#rocket").css({
+//                            'transform':'translate(0px,205px)'
+//                        })
+                        $('.section').eq(index-1).addClass("current");
+//                        if(index == 3){
+//                            $("#rocket").css({
+////                            'transition':'transition: all 1s',
+//                                'transform':'translate('+($("#cricle").position().left+100)+"px,-"+($("#cricle").position().top-100)+"px)"
+//                            })
+//                        }
+                    },200)
+            }
+        })
+//        console.log($("#cricle").position().left);
+    })
+//    var c = document.getElementById("cricle");
+//    var r = document.getElementById("rocket");
+//    var x = c.offsetLeft - c.offsetWidth/2;
+//    var y = c.offsetTop - c.offsetHeight/2;
+//    console.log(r.cssText);
+//    cssText
+
+</script>
